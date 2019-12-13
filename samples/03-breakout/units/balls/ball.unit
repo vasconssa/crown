@@ -60,7 +60,7 @@ components = [
 			lock_translation_x = false
 			lock_translation_y = true
 			lock_translation_z = false
-			mass = 10
+			mass = 1
 			material = "default"
 		}
 		id = "5f818cbe-5aec-477c-bf18-e26f8f708b5e"
