@@ -1,0 +1,21 @@
+
+cell_h = 128
+cell_w = 128
+circle_collision_center_x = 64
+circle_collision_center_y = 64
+circle_collision_radius = 62
+circle_square_active_name = "circle_collider"
+collision_enabled = true
+collision_h = 0
+collision_w = 0
+collision_x = 0
+collision_y = 0
+depth = 0
+layer = 0
+num_h = 1
+num_v = 1
+offset_x = 0
+offset_y = 0
+pivot = 4
+spacing_x = 0
+spacing_y = 0

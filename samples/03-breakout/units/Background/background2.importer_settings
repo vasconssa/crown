@@ -1,0 +1,17 @@
+
+cell_h = 960
+cell_w = 1920
+collision_enabled = false
+collision_h = 32
+collision_w = 32
+collision_x = 0
+collision_y = 0
+depth = 0
+layer = 0
+num_h = 1
+num_v = 1
+offset_x = 0
+offset_y = 0
+pivot = 4
+spacing_x = 0
+spacing_y = 0

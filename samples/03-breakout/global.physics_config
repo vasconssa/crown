@@ -1,0 +1,14 @@
+materials = {
+	default = { friction = 0.4 rolling_friction = 0.2 restitution = 1.00 }
+}
+
+collision_filters = {
+	no_collision = { collides_with = [] }
+	default = { collides_with = [ "default" ] }
+}
+
+actors = {
+	static = { dynamic = false }
+	dynamic = { dynamic = true }
+	keyframed = { dynamic = true kinematic = true disable_gravity = true }
+}

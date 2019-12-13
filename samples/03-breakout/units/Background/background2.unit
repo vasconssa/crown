@@ -1,0 +1,36 @@
+
+components = [
+	{
+		data = {
+			depth = 0
+			layer = 0
+			material = "units/Background/background2"
+			sprite_resource = "units/Background/background2"
+			visible = true
+		}
+		id = "005dc2da-9c7e-4fb8-b26d-07c08acdf457"
+		type = "sprite_renderer"
+	}
+	{
+		data = {
+			position = [
+				0
+				0
+				0
+			]
+			rotation = [
+				0
+				0
+				0
+				1
+			]
+			scale = [
+				1
+				1
+				1
+			]
+		}
+		id = "9c90a0bf-199f-41e4-a3dd-2791a51a29ee"
+		type = "transform"
+	}
+]

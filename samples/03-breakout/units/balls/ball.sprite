@@ -1,0 +1,18 @@
+
+frames = [
+	{
+		name = "sprite_0"
+		pivot = [
+			64
+			64
+		]
+		region = [
+			0
+			0
+			128
+			128
+		]
+	}
+]
+height = 128
+width = 128

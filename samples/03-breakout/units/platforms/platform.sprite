@@ -1,0 +1,317 @@
+
+frames = [
+	{
+		name = "sprite_0"
+		pivot = [
+			242
+			64
+		]
+		region = [
+			0
+			0
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_1"
+		pivot = [
+			727
+			64
+		]
+		region = [
+			485
+			0
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_2"
+		pivot = [
+			1212
+			64
+		]
+		region = [
+			970
+			0
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_3"
+		pivot = [
+			1697
+			64
+		]
+		region = [
+			1455
+			0
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_4"
+		pivot = [
+			242
+			192
+		]
+		region = [
+			0
+			128
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_5"
+		pivot = [
+			727
+			192
+		]
+		region = [
+			485
+			128
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_6"
+		pivot = [
+			1212
+			192
+		]
+		region = [
+			970
+			128
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_7"
+		pivot = [
+			1697
+			192
+		]
+		region = [
+			1455
+			128
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_8"
+		pivot = [
+			242
+			320
+		]
+		region = [
+			0
+			256
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_9"
+		pivot = [
+			727
+			320
+		]
+		region = [
+			485
+			256
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_10"
+		pivot = [
+			1212
+			320
+		]
+		region = [
+			970
+			256
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_11"
+		pivot = [
+			1697
+			320
+		]
+		region = [
+			1455
+			256
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_12"
+		pivot = [
+			242
+			448
+		]
+		region = [
+			0
+			384
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_13"
+		pivot = [
+			727
+			448
+		]
+		region = [
+			485
+			384
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_14"
+		pivot = [
+			1212
+			448
+		]
+		region = [
+			970
+			384
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_15"
+		pivot = [
+			1697
+			448
+		]
+		region = [
+			1455
+			384
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_16"
+		pivot = [
+			242
+			576
+		]
+		region = [
+			0
+			512
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_17"
+		pivot = [
+			727
+			576
+		]
+		region = [
+			485
+			512
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_18"
+		pivot = [
+			1212
+			576
+		]
+		region = [
+			970
+			512
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_19"
+		pivot = [
+			1697
+			576
+		]
+		region = [
+			1455
+			512
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_20"
+		pivot = [
+			242
+			704
+		]
+		region = [
+			0
+			640
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_21"
+		pivot = [
+			727
+			704
+		]
+		region = [
+			485
+			640
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_22"
+		pivot = [
+			1212
+			704
+		]
+		region = [
+			970
+			640
+			485
+			128
+		]
+	}
+	{
+		name = "sprite_23"
+		pivot = [
+			1697
+			704
+		]
+		region = [
+			1455
+			640
+			485
+			128
+		]
+	}
+]
+height = 768
+width = 1943

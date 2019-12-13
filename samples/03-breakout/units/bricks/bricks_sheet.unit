@@ -1,0 +1,62 @@
+
+components = [
+	{
+		data = {
+			position = [
+				0
+				0
+				0
+			]
+			rotation = [
+				0
+				0
+				0
+				1
+			]
+			scale = [
+				1
+				1
+				1
+			]
+		}
+		id = "810ca068-bfdb-4e84-b473-f5acf29362ee"
+		type = "transform"
+	}
+	{
+		data = {
+			depth = 0
+			layer = 0
+			material = "units/bricks/bricks_sheet"
+			sprite_resource = "units/bricks/bricks_sheet"
+			visible = true
+		}
+		id = "c29ea7a5-bea5-4dba-8da8-1df4af6a5bcc"
+		type = "sprite_renderer"
+	}
+	{
+		data = {
+			class = "keyframed"
+			collision_filter = "default"
+			lock_rotation_x = true
+			lock_rotation_y = true
+			lock_rotation_z = true
+			lock_translation_x = false
+			lock_translation_y = true
+			lock_translation_z = false
+			mass = 10
+			material = "default"
+		}
+		id = "77c8e917-196a-4382-8e6d-0e0613589197"
+		type = "actor"
+	}
+	{
+		data = {
+			material = "default"
+			name = "collider"
+			scene = "units/bricks/bricks_sheet"
+			shape = "box"
+		}
+		id = "42f56ce6-a7a6-41d2-92cf-9d7c230ff6c4"
+		type = "collider"
+	}
+]

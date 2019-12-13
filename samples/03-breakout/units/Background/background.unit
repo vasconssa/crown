@@ -1,0 +1,62 @@
+
+components = [
+	{
+		data = {
+			class = "static"
+			collision_filter = "default"
+			lock_rotation_x = true
+			lock_rotation_y = true
+			lock_rotation_z = true
+			lock_translation_x = false
+			lock_translation_y = true
+			lock_translation_z = false
+			mass = 10
+			material = "default"
+		}
+		id = "db289c18-7caf-4426-90de-7ae645d5dc5f"
+		type = "actor"
+	}
+	{
+		data = {
+			material = "default"
+			name = "collider"
+			scene = "units/Background/background"
+			shape = "box"
+		}
+		id = "cb4afa1e-ecf6-4e65-ba4a-b008e0a3e7fc"
+		type = "collider"
+	}
+	{
+		data = {
+			position = [
+				0
+				0
+				0
+			]
+			rotation = [
+				0
+				0
+				0
+				1
+			]
+			scale = [
+				1
+				1
+				1
+			]
+		}
+		id = "adc7bd44-5249-4f09-ac54-aacbed6b3d32"
+		type = "transform"
+	}
+	{
+		data = {
+			depth = 0
+			layer = 0
+			material = "units/Background/background"
+			sprite_resource = "units/Background/background"
+			visible = true
+		}
+		id = "d0199d43-d2fc-4335-bab6-e4667866801d"
+		type = "sprite_renderer"
+	}
+]

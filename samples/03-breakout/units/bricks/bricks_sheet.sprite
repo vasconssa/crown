@@ -1,0 +1,265 @@
+
+frames = [
+	{
+		name = "sprite_0"
+		pivot = [
+			192
+			64
+		]
+		region = [
+			0
+			0
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_1"
+		pivot = [
+			576
+			64
+		]
+		region = [
+			384
+			0
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_2"
+		pivot = [
+			960
+			64
+		]
+		region = [
+			768
+			0
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_3"
+		pivot = [
+			1344
+			64
+		]
+		region = [
+			1152
+			0
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_4"
+		pivot = [
+			1728
+			64
+		]
+		region = [
+			1536
+			0
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_5"
+		pivot = [
+			192
+			192
+		]
+		region = [
+			0
+			128
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_6"
+		pivot = [
+			576
+			192
+		]
+		region = [
+			384
+			128
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_7"
+		pivot = [
+			960
+			192
+		]
+		region = [
+			768
+			128
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_8"
+		pivot = [
+			1344
+			192
+		]
+		region = [
+			1152
+			128
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_9"
+		pivot = [
+			1728
+			192
+		]
+		region = [
+			1536
+			128
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_10"
+		pivot = [
+			192
+			320
+		]
+		region = [
+			0
+			256
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_11"
+		pivot = [
+			576
+			320
+		]
+		region = [
+			384
+			256
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_12"
+		pivot = [
+			960
+			320
+		]
+		region = [
+			768
+			256
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_13"
+		pivot = [
+			1344
+			320
+		]
+		region = [
+			1152
+			256
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_14"
+		pivot = [
+			1728
+			320
+		]
+		region = [
+			1536
+			256
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_15"
+		pivot = [
+			192
+			448
+		]
+		region = [
+			0
+			384
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_16"
+		pivot = [
+			576
+			448
+		]
+		region = [
+			384
+			384
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_17"
+		pivot = [
+			960
+			448
+		]
+		region = [
+			768
+			384
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_18"
+		pivot = [
+			1344
+			448
+		]
+		region = [
+			1152
+			384
+			384
+			128
+		]
+	}
+	{
+		name = "sprite_19"
+		pivot = [
+			1728
+			448
+		]
+		region = [
+			1536
+			384
+			384
+			128
+		]
+	}
+]
+height = 512
+width = 1920
