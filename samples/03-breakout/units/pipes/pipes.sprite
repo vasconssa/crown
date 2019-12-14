@@ -1,0 +1,733 @@
+
+frames = [
+	{
+		name = "sprite_0"
+		pivot = [
+			16
+			16
+		]
+		region = [
+			0
+			0
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_1"
+		pivot = [
+			48
+			16
+		]
+		region = [
+			32
+			0
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_2"
+		pivot = [
+			80
+			16
+		]
+		region = [
+			64
+			0
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_3"
+		pivot = [
+			112
+			16
+		]
+		region = [
+			96
+			0
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_4"
+		pivot = [
+			144
+			16
+		]
+		region = [
+			128
+			0
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_5"
+		pivot = [
+			176
+			16
+		]
+		region = [
+			160
+			0
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_6"
+		pivot = [
+			208
+			16
+		]
+		region = [
+			192
+			0
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_7"
+		pivot = [
+			16
+			48
+		]
+		region = [
+			0
+			32
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_8"
+		pivot = [
+			48
+			48
+		]
+		region = [
+			32
+			32
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_9"
+		pivot = [
+			80
+			48
+		]
+		region = [
+			64
+			32
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_10"
+		pivot = [
+			112
+			48
+		]
+		region = [
+			96
+			32
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_11"
+		pivot = [
+			144
+			48
+		]
+		region = [
+			128
+			32
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_12"
+		pivot = [
+			176
+			48
+		]
+		region = [
+			160
+			32
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_13"
+		pivot = [
+			208
+			48
+		]
+		region = [
+			192
+			32
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_14"
+		pivot = [
+			16
+			80
+		]
+		region = [
+			0
+			64
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_15"
+		pivot = [
+			48
+			80
+		]
+		region = [
+			32
+			64
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_16"
+		pivot = [
+			80
+			80
+		]
+		region = [
+			64
+			64
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_17"
+		pivot = [
+			112
+			80
+		]
+		region = [
+			96
+			64
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_18"
+		pivot = [
+			144
+			80
+		]
+		region = [
+			128
+			64
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_19"
+		pivot = [
+			176
+			80
+		]
+		region = [
+			160
+			64
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_20"
+		pivot = [
+			208
+			80
+		]
+		region = [
+			192
+			64
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_21"
+		pivot = [
+			16
+			112
+		]
+		region = [
+			0
+			96
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_22"
+		pivot = [
+			48
+			112
+		]
+		region = [
+			32
+			96
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_23"
+		pivot = [
+			80
+			112
+		]
+		region = [
+			64
+			96
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_24"
+		pivot = [
+			112
+			112
+		]
+		region = [
+			96
+			96
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_25"
+		pivot = [
+			144
+			112
+		]
+		region = [
+			128
+			96
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_26"
+		pivot = [
+			176
+			112
+		]
+		region = [
+			160
+			96
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_27"
+		pivot = [
+			208
+			112
+		]
+		region = [
+			192
+			96
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_28"
+		pivot = [
+			16
+			144
+		]
+		region = [
+			0
+			128
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_29"
+		pivot = [
+			48
+			144
+		]
+		region = [
+			32
+			128
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_30"
+		pivot = [
+			80
+			144
+		]
+		region = [
+			64
+			128
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_31"
+		pivot = [
+			112
+			144
+		]
+		region = [
+			96
+			128
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_32"
+		pivot = [
+			144
+			144
+		]
+		region = [
+			128
+			128
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_33"
+		pivot = [
+			176
+			144
+		]
+		region = [
+			160
+			128
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_34"
+		pivot = [
+			208
+			144
+		]
+		region = [
+			192
+			128
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_35"
+		pivot = [
+			16
+			176
+		]
+		region = [
+			0
+			160
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_36"
+		pivot = [
+			48
+			176
+		]
+		region = [
+			32
+			160
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_37"
+		pivot = [
+			80
+			176
+		]
+		region = [
+			64
+			160
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_38"
+		pivot = [
+			112
+			176
+		]
+		region = [
+			96
+			160
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_39"
+		pivot = [
+			144
+			176
+		]
+		region = [
+			128
+			160
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_40"
+		pivot = [
+			176
+			176
+		]
+		region = [
+			160
+			160
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_41"
+		pivot = [
+			208
+			176
+		]
+		region = [
+			192
+			160
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_42"
+		pivot = [
+			16
+			208
+		]
+		region = [
+			0
+			192
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_43"
+		pivot = [
+			48
+			208
+		]
+		region = [
+			32
+			192
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_44"
+		pivot = [
+			80
+			208
+		]
+		region = [
+			64
+			192
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_45"
+		pivot = [
+			112
+			208
+		]
+		region = [
+			96
+			192
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_46"
+		pivot = [
+			144
+			208
+		]
+		region = [
+			128
+			192
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_47"
+		pivot = [
+			176
+			208
+		]
+		region = [
+			160
+			192
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_48"
+		pivot = [
+			208
+			208
+		]
+		region = [
+			192
+			192
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_49"
+		pivot = [
+			16
+			240
+		]
+		region = [
+			0
+			224
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_50"
+		pivot = [
+			48
+			240
+		]
+		region = [
+			32
+			224
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_51"
+		pivot = [
+			80
+			240
+		]
+		region = [
+			64
+			224
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_52"
+		pivot = [
+			112
+			240
+		]
+		region = [
+			96
+			224
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_53"
+		pivot = [
+			144
+			240
+		]
+		region = [
+			128
+			224
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_54"
+		pivot = [
+			176
+			240
+		]
+		region = [
+			160
+			224
+			32
+			32
+		]
+	}
+	{
+		name = "sprite_55"
+		pivot = [
+			208
+			240
+		]
+		region = [
+			192
+			224
+			32
+			32
+		]
+	}
+]
+height = 256
+width = 224

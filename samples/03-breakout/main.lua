@@ -43,7 +43,7 @@ function Game.level_loaded()
 	--Game.players[1] = World.spawn_unit(GameBase.world, "units/soldier", Vector3(-2, 0, 0))
 	--Game.players[2] = World.spawn_unit(GameBase.world, "units/princess", Vector3(2, 0, 0))
 	--Game.player = Game.players[1]
-    --PhysicsWorld.set_gravity(Game.pw, Vector3(0, 0, -0.2))
+    PhysicsWorld.set_gravity(Game.pw, Vector3(0, 0, -0.2))
     ballActor = PhysicsWorld.actor_instances(Game.pw, Game.ball)
     playerActor = PhysicsWorld.actor_instances(Game.pw, Game.player)
     print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
@@ -64,7 +64,7 @@ function Game.update(dt)
 	end
 
     if Keyboard.released(Keyboard.button_id("space")) then
-        PhysicsWorld.actor_add_impulse(Game.pw, ballActor, Vector3(0, 0, 100))
+        PhysicsWorld.actor_add_impulse(Game.pw, ballActor, Vector3(0, 0, 5))
     end
 
 	-- Toggle fullscreen

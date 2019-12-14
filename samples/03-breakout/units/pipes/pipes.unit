@@ -1,0 +1,61 @@
+
+components = [
+	{
+		data = {
+			name = "collider"
+			scene = "units/pipes/pipes"
+			shape = "box"
+		}
+		id = "3b634158-1b63-4c26-9df4-777aae7d2b1f"
+		type = "collider"
+	}
+	{
+		data = {
+			class = "static"
+			collision_filter = "default"
+			lock_rotation_x = true
+			lock_rotation_y = true
+			lock_rotation_z = true
+			lock_translation_x = false
+			lock_translation_y = true
+			lock_translation_z = false
+			mass = 10
+			material = "default"
+		}
+		id = "a17da3b9-15ad-4614-b1aa-27a1560d9f65"
+		type = "actor"
+	}
+	{
+		data = {
+			position = [
+				0
+				0
+				0
+			]
+			rotation = [
+				0
+				0
+				0
+				1
+			]
+			scale = [
+				1
+				1
+				1
+			]
+		}
+		id = "6d711239-997c-4b12-ab10-4123e4a4547c"
+		type = "transform"
+	}
+	{
+		data = {
+			depth = 0
+			layer = 0
+			material = "units/pipes/pipes"
+			sprite_resource = "units/pipes/pipes"
+			visible = true
+		}
+		id = "7b176623-0057-4681-977b-e07f08d1816a"
+		type = "sprite_renderer"
+	}
+]
