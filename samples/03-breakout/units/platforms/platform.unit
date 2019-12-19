@@ -59,4 +59,11 @@ components = [
 		id = "1b09e46e-0b7b-4661-97c1-b9d2f7bb0dd9"
 		type = "sprite_renderer"
 	}
+	{
+		data = {
+			script_resource = "scripts/main_player"
+		}
+		id = "5f919ccc-57bb-477c-bf19-e26f8f999b5e"
+		type = "script"
+	}
 ]

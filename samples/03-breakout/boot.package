@@ -3,8 +3,10 @@ lua = [
 	"core/game/game"
 	"core/game/boot"
 	"core/lua/class"
-    "scripts/level_generator"
+	"scripts/main_player"
     "scripts/behaviour"
+	"scripts/bricks"
+    "scripts/level_generator"
 	"main"
 ]
 shader = [

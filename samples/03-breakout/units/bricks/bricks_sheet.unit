@@ -59,4 +59,11 @@ components = [
 		id = "42f56ce6-a7a6-41d2-92cf-9d7c230ff6c4"
 		type = "collider"
 	}
+	{
+		data = {
+			script_resource = "scripts/bricks"
+		}
+		id = "5f919cbe-5bbb-477c-bf19-e26f8f999b5e"
+		type = "script"
+	}
 ]

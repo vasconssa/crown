@@ -24,10 +24,8 @@ function gen_piped_wall(world)
 
     num_y_pipes = math.ceil(heigth/pipe_height)
     scale_y = heigth/(num_y_pipes*pipe_height)
-    print(scale_y)
     num_x_pipes = math.ceil(width/pipe_width)
     scale_x = width/(num_x_pipes*pipe_width)
-    print(scale_x)
 
     posx = -width/2/PIXELS_PER_METER + (pipe_width/2/PIXELS_PER_METER)*scale_y
     posz = -heigth/2/PIXELS_PER_METER + (pipe_height/PIXELS_PER_METER/2)*scale_y
@@ -47,7 +45,7 @@ function gen_piped_wall(world)
         RenderWorld.sprite_set_frame(rw, b, 6)
         posx = posx + (pipe_width/PIXELS_PER_METER)*scale_x
     end
-    
+
 end
 
 function level1(world)
@@ -62,7 +60,6 @@ function level1(world)
     width, heigth = Device.resolution()
 
     width = width - 2*pipe_width
-    print("height: ")
     heigth = heigth - 2*pipe_height
     scale = width/(blocks_per_row*block_width)
     pos = -width/2/PIXELS_PER_METER
@@ -85,7 +82,6 @@ function level1(world)
     pos_platform_z = -heigth/2/PIXELS_PER_METER;
     pos_platform_z = pos_platform_z + (platform_height/PIXELS_PER_METER/2)*scale
     pos_platform_x = 0
-    print(pos_platform_z)
     GameBase.game.player = World.spawn_unit(world, "units/platforms/platform", Vector3(pos_platform_x, 0, pos_platform_z), Quaternion.from_elements(0, 0, 0, 1), Vector3(scale, scale, scale))
     --SceneGraph.set_local_scale(sg, GameBase.game.player, Vector3(scale, scale, scale))
     GameBase.game.ball = World.spawn_unit(world, "units/balls/ball", Vector3(pos_platform_x, 0, pos_platform_z+scale*platform_height/PIXELS_PER_METER/2 + scale*ball_radius/PIXELS_PER_METER/2), Quaternion.from_elements(0, 0, 0, 1), Vector3(scale, scale, scale))

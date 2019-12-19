@@ -38,20 +38,11 @@ function Game.level_loaded()
 
 	GameBase.game_camera = camera_unit
     level1(GameBase.world)
-    --World.spawn_unit(GameBase.world, "units/Background/background", Vector3(0, 0, 0))
-	-- Spawn characters
-	--Game.players[1] = World.spawn_unit(GameBase.world, "units/soldier", Vector3(-2, 0, 0))
-	--Game.players[2] = World.spawn_unit(GameBase.world, "units/princess", Vector3(2, 0, 0))
-	--Game.player = Game.players[1]
     PhysicsWorld.set_gravity(Game.pw, Vector3(0, 0, -0.2))
     ballActor = PhysicsWorld.actor_instances(Game.pw, Game.ball)
     playerActor = PhysicsWorld.actor_instances(Game.pw, Game.player)
     print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
-    --PhysicsWorld.actor_set_kinematic(Game.pw, playerActor, true)
     PhysicsWorld.enable_debug_drawing(pw,true)
-    --PhysicsWorld.actor_disable_gravity(Game.pw, playerActor)
-    --PhysicsWorld.actor_enable_collision(Game.pw, playerActor)
-    --PhysicsWorld.actor_enable_collision(Game.pw, ballActor)
 end
 
 function Game.update(dt)
@@ -81,24 +72,6 @@ function Game.update(dt)
 		Game.player = Game.players[Game.player_i]
 	end
     --]]
-
-	-- Player movement
-	local function swap_yz(vector3_xy)
-		return Vector3(vector3_xy.x, 0, vector3_xy.y)
-	end
-
-	-- Read direction from joypad
-	local pad_dir = Pad1.axis(Pad1.axis_id("left"))
-	-- Add keyboard contribution
-	if pad_dir.x == 0.0 and pad_dir.y == 0.0 then
-		pad_dir.x = pad_dir.x + Keyboard.button(Keyboard.button_id("right")) - Keyboard.button(Keyboard.button_id("left"))
-		--pad_dir.y = pad_dir.y + Keyboard.button(Keyboard.button_id("w")) - Keyboard.button(Keyboard.button_id("s"))
-	end
-	-- Compute new player position
-	local player_speed = 10
-	local player_position = SceneGraph.local_position(Game.sg, Game.player)
-	SceneGraph.set_local_position(Game.sg, Game.player, player_position + swap_yz(pad_dir)*player_speed*dt)
-
 	-- Sprite depth is proportional to its Z position
     --[[
 	for i=1, #Game.players do

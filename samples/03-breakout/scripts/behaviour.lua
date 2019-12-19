@@ -1,10 +1,12 @@
-local Behavior = Behavior or {}
+local BallBehaviour = BallBehaviour or {}
 local Data = Data or {}
 
-function Behavior.spawned(world, units)
+function BallBehaviour.spawned(world, units)
 	if Data[world] == nil then
 		Data[world] = {}
 	end
+	print("num unit: ")
+	print(#units)
 
 	for uu = 1, #units do
 		local unit = units[uu]
@@ -20,21 +22,21 @@ function Behavior.spawned(world, units)
 	end
 end
 
-function Behavior.unspawned(world, units)
+function BallBehaviour.unspawned(world, units)
 end
 
-function Behavior.update(world, dt)
+function BallBehaviour.update(world, dt)
 end
 
-function Behavior.collision_begin(touched, touching, actor, position, normal, distance)
+function BallBehaviour.collision_begin(touched, touching, actor, position, normal, distance)
 	--print("Collision begin")
 end
 
-function Behavior.collision(touched, touching, actor, position, normal, distance)
-	print("Collision")
+function BallBehaviour.collision(touched, touching, actor, position, normal, distance)
+	--print("Collision")
 	-- print(Vector3.elements(position))
 	-- print(Vector3.elements(normal))
 	-- print(distance)
 end
 
-return Behavior
+return BallBehaviour
