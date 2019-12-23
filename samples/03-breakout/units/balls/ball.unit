@@ -2,13 +2,33 @@
 components = [
 	{
 		data = {
+			collider_data = {
+				position = [
+					0
+					0
+					-0
+				]
+				radius = 2.0625
+				rotation = [
+					0
+					0
+					0
+					1
+				]
+			}
 			material = "default"
-			name = "collider"
-			scene = "units/balls/ball"
 			shape = "sphere"
+			source = "inline"
 		}
 		id = "1c7b9a1b-bbbc-4696-a3dd-f561e30fd3e3"
 		type = "collider"
+	}
+	{
+		data = {
+			script_resource = "scripts/behaviour"
+		}
+		id = "5f919cbe-5bbb-477c-bf19-e26f8f708b5e"
+		type = "script"
 	}
 	{
 		data = {
@@ -31,13 +51,6 @@ components = [
 		}
 		id = "4d5a9a48-3f65-46ef-a5ff-8cf1d63a7265"
 		type = "transform"
-	}
-	{
-		data = {
-			script_resource = "scripts/behaviour"
-		}
-		id = "5f919cbe-5bbb-477c-bf19-e26f8f708b5e"
-		type = "script"
 	}
 	{
 		data = {

@@ -18,6 +18,7 @@ Game = {
 	fullscreen = false
 }
 
+
 GameBase.game = Game
 GameBase.game_level = "game"
 
@@ -30,22 +31,22 @@ function Game.level_loaded()
 	-- Spawn camera
 	local camera_unit = World.spawn_unit(GameBase.world, "core/units/camera")
     -- set 2d camera
-    width, heigth = Device.resolution()
-	World.camera_set_orthographic_size(GameBase.world, camera_unit, heigth/2/PIXELS_PER_METER)
+    device_width, device_heigth = Device.resolution()
+	World.camera_set_orthographic_size(GameBase.world, camera_unit, device_heigth/2/PIXELS_PER_METER)
 	World.camera_set_projection_type(GameBase.world, camera_unit, "orthographic")
 	SceneGraph.set_local_position(Game.sg, camera_unit, Vector3(0, 8, 0))
 	SceneGraph.set_local_rotation(Game.sg, camera_unit, Quaternion.from_axis_angle(Vector3.right(), 90*(math.pi/180.0)))
 
 	GameBase.game_camera = camera_unit
     level1(GameBase.world)
-    PhysicsWorld.set_gravity(Game.pw, Vector3(0, 0, -0.2))
-    ballActor = PhysicsWorld.actor_instances(Game.pw, Game.ball)
+    PhysicsWorld.set_gravity(Game.pw, Vector3(0, 0, -1.0))
     playerActor = PhysicsWorld.actor_instances(Game.pw, Game.player)
-    print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
+    --print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
     PhysicsWorld.enable_debug_drawing(pw,true)
 end
 
 function Game.update(dt)
+    ballActor = PhysicsWorld.actor_instances(Game.pw, Game.ball)
     --print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
     --PhysicsWorld.actor_teleport_world_pose(Game.pw, playerActor, SceneGraph.world_pose(Game.sg, Game.player))
     ---[[
@@ -54,8 +55,9 @@ function Game.update(dt)
 		Device.quit()
 	end
 
-    if Keyboard.released(Keyboard.button_id("space")) then
-        PhysicsWorld.actor_add_impulse(Game.pw, ballActor, Vector3(0, 0, 5))
+	local vel = PhysicsWorld.actor_linear_velocity(Game.pw, ballActor)
+    if Keyboard.released(Keyboard.button_id("space")) and Vector3.length(vel) < 0.1 then
+        PhysicsWorld.actor_add_impulse(Game.pw, ballActor, Vector3(0, 0, 15))
     end
 
 	-- Toggle fullscreen

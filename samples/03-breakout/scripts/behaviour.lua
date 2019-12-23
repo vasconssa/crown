@@ -29,7 +29,7 @@ function BallBehaviour.update(world, dt)
 end
 
 function BallBehaviour.collision_begin(touched, touching, actor, position, normal, distance)
-	--print("Collision begin")
+	print("Collision begin ball")
 end
 
 function BallBehaviour.collision(touched, touching, actor, position, normal, distance)

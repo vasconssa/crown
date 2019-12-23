@@ -1,5 +1,5 @@
 materials = {
-	default = { friction = 0.9 rolling_friction = 0.9 restitution = 1.00 }
+	default = { friction = 0.9 rolling_friction = 0.9 restitution = 1.0 }
 }
 
 collision_filters = {

@@ -16,7 +16,8 @@ function gen_background()
 end
 
 function gen_piped_wall(world)
-    width, heigth = Device.resolution()
+	width = 0.7*device_width
+	heigth = device_heigth
 	pw = World.physics_world(world)
 	rw = World.render_world(world)
 	sg = World.scene_graph(world)
@@ -27,7 +28,7 @@ function gen_piped_wall(world)
     num_x_pipes = math.ceil(width/pipe_width)
     scale_x = width/(num_x_pipes*pipe_width)
 
-    posx = -width/2/PIXELS_PER_METER + (pipe_width/2/PIXELS_PER_METER)*scale_y
+    posx = -(device_width)/2/PIXELS_PER_METER + (pipe_width/2/PIXELS_PER_METER)*scale_y
     posz = -heigth/2/PIXELS_PER_METER + (pipe_height/PIXELS_PER_METER/2)*scale_y
     for i=1, num_y_pipes do
         a = World.spawn_unit(world, "units/pipes/pipes", Vector3(posx, 0, posz), Quaternion.from_elements(0, 0, 0, 1), Vector3(scale_x, 1, scale_y))
@@ -36,7 +37,7 @@ function gen_piped_wall(world)
         RenderWorld.sprite_set_frame(rw, b, 14)
         posz = posz + (pipe_height/PIXELS_PER_METER)*scale_y
     end
-    posx = -width/2/PIXELS_PER_METER + (pipe_width/2/PIXELS_PER_METER)*scale_y
+    posx = -device_width/2/PIXELS_PER_METER + (pipe_width/2/PIXELS_PER_METER)*scale_y
     posz = heigth/2/PIXELS_PER_METER - (pipe_height/PIXELS_PER_METER/2)*scale_y
     for i=1, num_x_pipes do
         a = World.spawn_unit(world, "units/pipes/pipes", Vector3(posx, 0, posz), Quaternion.from_elements(0, 0, 0, 1), Vector3(scale_x, 1, scale_y))
@@ -57,34 +58,35 @@ function level1(world)
 
     World.spawn_unit(world, "units/Background/background", Vector3(0, 0, 0))
     gen_piped_wall(world)
-    width, heigth = Device.resolution()
 
     width = width - 2*pipe_width
     heigth = heigth - 2*pipe_height
-    scale = width/(blocks_per_row*block_width)
-    pos = -width/2/PIXELS_PER_METER
-    pos = pos + (block_width/PIXELS_PER_METER/2)*scale
+    bricks_scale = width/(blocks_per_row*block_width)
+	ball_scale = 0.2
+	platform_scale = 0.3
+    pos = -(device_width - 2*pipe_width)/2/PIXELS_PER_METER
+    pos = pos + (block_width/PIXELS_PER_METER/2)*bricks_scale
     posz = heigth/2/PIXELS_PER_METER;
-    posz = posz - (block_height/PIXELS_PER_METER/2)*scale
+    posz = posz - (block_height/PIXELS_PER_METER/2)*bricks_scale
     for i=1, block_num_rows do
         for j=1, blocks_per_row do
             idx = (i-5)*5 + j
-            blocks[idx] = World.spawn_unit(world, "units/bricks/bricks_sheet", Vector3(pos, 0, posz), Quaternion.from_elements(0, 0, 0, 1), Vector3(scale, scale, scale))
+            blocks[idx] = World.spawn_unit(world, "units/bricks/bricks_sheet", Vector3(pos, 0, posz), Quaternion.from_elements(0, 0, 0, 1), Vector3(bricks_scale, bricks_scale, bricks_scale))
             --SceneGraph.set_local_scale(sg, blocks[idx], Vector3(scale, scale, scale))
             RenderWorld.sprite_set_frame(rw, blocks[idx], math.random(1,20))
-            pos = pos + (block_width/PIXELS_PER_METER)*scale
+            pos = pos + (block_width/PIXELS_PER_METER)*bricks_scale
         end
-        pos = -width/2/PIXELS_PER_METER
-        pos = pos + (block_width/PIXELS_PER_METER/2)*scale
-        posz = posz - (block_height/PIXELS_PER_METER)*scale
+        pos = -(device_width - 2*pipe_width)/2/PIXELS_PER_METER
+        pos = pos + (block_width/PIXELS_PER_METER/2)*bricks_scale
+        posz = posz - (block_height/PIXELS_PER_METER)*bricks_scale
     end
 
     pos_platform_z = -heigth/2/PIXELS_PER_METER;
-    pos_platform_z = pos_platform_z + (platform_height/PIXELS_PER_METER/2)*scale
+    pos_platform_z = pos_platform_z + (platform_height/PIXELS_PER_METER/2)*platform_scale
     pos_platform_x = 0
-    GameBase.game.player = World.spawn_unit(world, "units/platforms/platform", Vector3(pos_platform_x, 0, pos_platform_z), Quaternion.from_elements(0, 0, 0, 1), Vector3(scale, scale, scale))
+    GameBase.game.player = World.spawn_unit(world, "units/platforms/platform", Vector3(pos_platform_x, 0, pos_platform_z), Quaternion.from_elements(0, 0, 0, 1), Vector3(platform_scale, platform_scale, platform_scale))
     --SceneGraph.set_local_scale(sg, GameBase.game.player, Vector3(scale, scale, scale))
-    GameBase.game.ball = World.spawn_unit(world, "units/balls/ball", Vector3(pos_platform_x, 0, pos_platform_z+scale*platform_height/PIXELS_PER_METER/2 + scale*ball_radius/PIXELS_PER_METER/2), Quaternion.from_elements(0, 0, 0, 1), Vector3(scale, scale, scale))
+    GameBase.game.ball = World.spawn_unit(world, "units/balls/ball", Vector3(pos_platform_x, 0, pos_platform_z+platform_scale*platform_height/PIXELS_PER_METER/2 + ball_scale*ball_radius/PIXELS_PER_METER/2), Quaternion.from_elements(0, 0, 0, 1), Vector3(ball_scale, ball_scale, ball_scale))
     --SceneGraph.set_local_scale(sg, GameBase.game.ball, Vector3(scale, scale, scale))
 
 

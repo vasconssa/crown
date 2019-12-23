@@ -1,18 +1,19 @@
-local Behavior = Behavior or {}
+local PlayerBehaviour = PlayerBehaviour or {}
 local Data = Data or {}
 local sg
+local pw
 local playerUnit = nil
 
-function Behavior.spawned(world, units)
+function PlayerBehaviour.spawned(world, units)
 	playerUnit = units[1]
 	sg = World.scene_graph(world)
+	pw = World.physics_world(world)
 end
 
-function Behavior.unspawned(world, units)
+function PlayerBehaviour.unspawned(world, units)
 end
 
-function Behavior.update(world, dt)
-
+function PlayerBehaviour.update(world, dt)
 	-- Player movement
 	local function swap_yz(vector3_xy)
 		return Vector3(vector3_xy.x, 0, vector3_xy.y)
@@ -28,18 +29,35 @@ function Behavior.update(world, dt)
 	-- Compute new player position
 	local player_speed = 10
 	local player_position = SceneGraph.local_position(sg, playerUnit)
-	SceneGraph.set_local_position(sg, playerUnit, player_position + swap_yz(pad_dir)*player_speed*dt)
+	local platform_width = 485
+	local delta_x =  swap_yz(pad_dir)*player_speed*dt
+
+	hit_left, c, n, t, unit, actor_left = PhysicsWorld.cast_ray(pw, player_position, Vector3(-1, 0, 0), platform_width/2/32*platform_scale)
+	hit_right, c, n, t, unit, actor_right = PhysicsWorld.cast_ray(pw, player_position, Vector3(1, 0, 0), platform_width/2/32*platform_scale)
+
+	if hit_left and delta_x.x < 0 then
+		print("hit_left")
+		delta_x = Vector3(0, 0, 0)
+	end
+
+	if hit_right and delta_x.x > 0 then
+		print("hit_right")
+		delta_x = Vector3(0, 0, 0)
+	end
+
+	SceneGraph.set_local_position(sg, playerUnit, player_position + delta_x)
+
 end
 
-function Behavior.collision_begin(touched, touching, actor, position, normal, distance)
+function PlayerBehaviour.collision_begin(touched, touching, actor, position, normal, distance)
 	--print("Collision begin")
 end
 
-function Behavior.collision(touched, touching, actor, position, normal, distance)
+function PlayerBehaviour.collision(touched, touching, actor, position, normal, distance)
 	--print("Collision")
 	-- print(Vector3.elements(position))
 	-- print(Vector3.elements(normal))
 	-- print(distance)
 end
 
-return Behavior
+return PlayerBehaviour

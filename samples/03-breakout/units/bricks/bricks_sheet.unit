@@ -35,7 +35,7 @@ components = [
 	}
 	{
 		data = {
-			class = "keyframed"
+			class = "static"
 			collision_filter = "default"
 			lock_rotation_x = true
 			lock_rotation_y = true
@@ -51,19 +51,36 @@ components = [
 	}
 	{
 		data = {
-			material = "default"
-			name = "collider"
-			scene = "units/bricks/bricks_sheet"
-			shape = "box"
+			script_resource = "scripts/bricks"
 		}
-		id = "42f56ce6-a7a6-41d2-92cf-9d7c230ff6c4"
-		type = "collider"
+		id = "88c8e917-196a-4382-8e6d-0e0613589197"
+		type = "script"
 	}
 	{
 		data = {
-			script_resource = "scripts/bricks"
+			collider_data = {
+				half_extents = [
+					6
+					0.015625
+					2.03125
+				]
+				position = [
+					0
+					0
+					-0.046875
+				]
+				rotation = [
+					0
+					0
+					0
+					1
+				]
+			}
+			material = "default"
+			shape = "box"
+			source = "inline"
 		}
-		id = "5f919cbe-5bbb-477c-bf19-e26f8f999b5e"
-		type = "script"
+		id = "42f56ce6-a7a6-41d2-92cf-9d7c230ff6c4"
+		type = "collider"
 	}
 ]

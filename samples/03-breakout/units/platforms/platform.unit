@@ -24,6 +24,13 @@ components = [
 	}
 	{
 		data = {
+			script_resource = "scripts/main_player"
+		}
+		id = "5f919ccc-57bb-477c-bf19-e26f8f999b5e"
+		type = "script"
+	}
+	{
+		data = {
 			class = "keyframed"
 			collision_filter = "default"
 			lock_rotation_x = true
@@ -32,7 +39,7 @@ components = [
 			lock_translation_x = false
 			lock_translation_y = true
 			lock_translation_z = false
-			mass = 100
+			mass = 10
 			material = "default"
 		}
 		id = "903e6b46-6787-4334-9ccc-c5785b3400ee"
@@ -40,10 +47,24 @@ components = [
 	}
 	{
 		data = {
+			collider_data = {
+				height = 11.09375
+				position = [
+					0
+					0
+					-0
+				]
+				radius = 2.0625
+				rotation = [
+					0
+					0
+					0.70710679664085752
+					0.70710676573223719
+				]
+			}
 			material = "default"
-			name = "collider"
-			scene = "units/platforms/platform"
-			shape = "box"
+			shape = "capsule"
+			source = "inline"
 		}
 		id = "b57f3cf1-76a6-4da3-a731-e4dfe71d3532"
 		type = "collider"
@@ -58,12 +79,5 @@ components = [
 		}
 		id = "1b09e46e-0b7b-4661-97c1-b9d2f7bb0dd9"
 		type = "sprite_renderer"
-	}
-	{
-		data = {
-			script_resource = "scripts/main_player"
-		}
-		id = "5f919ccc-57bb-477c-bf19-e26f8f999b5e"
-		type = "script"
 	}
 ]
