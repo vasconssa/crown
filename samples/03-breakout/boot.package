@@ -12,6 +12,8 @@ lua = [
 shader = [
 	"core/shaders/common"
 	"core/shaders/default"
+	"shaders/electricity"
+	"shaders/brick"
 ]
 physics_config = [
 	"global"

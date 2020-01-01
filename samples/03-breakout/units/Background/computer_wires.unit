@@ -19,26 +19,15 @@ components = [
 				1
 			]
 		}
-		id = "810ca068-bfdb-4e84-b473-f5acf29362ee"
+		id = "20afd9e6-00d5-4f72-9029-f42e4c88bd50"
 		type = "transform"
-	}
-	{
-		data = {
-			depth = 0
-			layer = 1
-			material = "units/bricks/bricks_sheet"
-			sprite_resource = "units/bricks/bricks_sheet"
-			visible = true
-		}
-		id = "c29ea7a5-bea5-4dba-8da8-1df4af6a5bcc"
-		type = "sprite_renderer"
 	}
 	{
 		data = {
 			class = "static"
 			collision_filter = "default"
 			lock_rotation_x = true
-			lock_rotation_y = true
+			lock_rotation_y = false
 			lock_rotation_z = true
 			lock_translation_x = false
 			lock_translation_y = true
@@ -46,28 +35,21 @@ components = [
 			mass = 10
 			material = "default"
 		}
-		id = "77c8e917-196a-4382-8e6d-0e0613589197"
+		id = "486a8fd6-8e17-4211-a0a6-8aa20fd38552"
 		type = "actor"
-	}
-	{
-		data = {
-			script_resource = "scripts/bricks"
-		}
-		id = "88c8e917-196a-4382-8e6d-0e0613589197"
-		type = "script"
 	}
 	{
 		data = {
 			collider_data = {
 				half_extents = [
-					6
+					0.5
 					0.015625
-					2.03125
+					0.5
 				]
 				position = [
+					-19.5
 					0
-					0
-					-0.046875
+					12
 				]
 				rotation = [
 					0
@@ -76,11 +58,21 @@ components = [
 					1
 				]
 			}
-			material = "default"
 			shape = "box"
 			source = "inline"
 		}
-		id = "42f56ce6-a7a6-41d2-92cf-9d7c230ff6c4"
+		id = "8d704686-279b-4a09-bab0-06cb1cd205f4"
 		type = "collider"
+	}
+	{
+		data = {
+			depth = 0
+			layer = 0
+			material = "units/Background/computer_wires"
+			sprite_resource = "units/Background/computer_wires"
+			visible = true
+		}
+		id = "6926df45-09ca-4d8a-b1d7-4bc3c6f79e18"
+		type = "sprite_renderer"
 	}
 ]

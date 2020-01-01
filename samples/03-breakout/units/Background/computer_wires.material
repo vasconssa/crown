@@ -1,0 +1,21 @@
+
+shader = "electricity"
+textures = {
+	u_albedo = "units/Background/computer_wires"
+	u_fl = "units/Background/fl"
+}
+uniforms = {
+	u_color = {
+		type = "vector4"
+		value = [
+			1
+			1
+			1
+			1
+		]
+	}
+	u_time = {
+		type = "float"
+		value = 0.5
+	}
+}

@@ -1,0 +1,92 @@
+initial_state = "03001f3e-8b7f-481c-bce4-b0ad9393182a"
+states = [
+	{
+		animations = [
+			{
+				id = "2463a8ec-6735-496b-9558-338e655a2e4f"
+				name = "units/bricks/brick_bottom"
+				weight = "1"
+			}
+		]
+		id = "03001f3e-8b7f-481c-bce4-b0ad9393182a"
+		loop = true
+		speed = "1"
+		transitions = [
+			{
+				event = "cracked"
+				id = "13e14fa3-2cf9-474b-9c8a-fc7c7b227641"
+				mode = "immediate"
+				to = "42d8083d-f42b-48b8-92e2-1fb3a5bb3d8b"
+			}
+		]
+	}
+	{
+		animations = [
+			{
+				id = "ca2509e1-fee9-44a8-b5f8-07c10034a6b3"
+				name = "units/bricks/brick_bottom_cracked"
+				weight = "1"
+			}
+		]
+		id = "42d8083d-f42b-48b8-92e2-1fb3a5bb3d8b"
+		loop = false
+		speed = "1"
+		transitions = [
+			{
+				event = "explode"
+				id = "06cef18c-83ea-498d-815c-c764b2c6bcee"
+				mode = "immediate"
+				to = "52d8083d-f42b-48b8-92e2-1fb3a5bb3d9c"
+			}
+		]
+	}
+	{
+		animations = [
+			{
+				id = "ca2509e1-fee9-44a8-b5f8-07c10034a6b3"
+				name = "units/bricks/brick_bottom_explode"
+				weight = "1"
+			}
+		]
+		id = "52d8083d-f42b-48b8-92e2-1fb3a5bb3d9c"
+		loop = false
+		speed = "1"
+		transitions = [
+			{
+				event = "animation_end"
+				id = "06cef18c-83ea-498d-815c-c764b2c6bcee"
+				mode = "immediate"
+				to = "5333883d-g42b-48b8-92e2-1fb3a5bb3d9c"
+			}
+		]
+	}
+	{
+		animations = [
+			{
+				id = "ca2509e1-fee9-44a8-b5f8-07c10034a6b3"
+				name = "units/bricks/brick_bottom_explode"
+				weight = "1"
+			}
+		]
+		id = "5333883d-g42b-48b8-92e2-1fb3a5bb3d9c"
+		loop = false
+		speed = "1"
+		"finished" = "1"
+		transitions = [
+			{
+				event = "finishe"
+				id = "06cef18c-83ea-498d-815c-c764b2c6bcee"
+				mode = "immediate"
+				to = "03001f3e-8b7f-481c-bce4-b0ad9393182a"
+			}
+		]
+	}
+
+]
+variables = [
+	{
+		id = "29015d56-f6d9-478d-baba-73f234bbdf2d"
+		name = "finished"
+		value = 0
+	}
+]

@@ -1,0 +1,18 @@
+
+frames = [
+	{
+		name = "sprite_0"
+		pivot = [
+			960
+			600
+		]
+		region = [
+			0
+			0
+			1920
+			1200
+		]
+	}
+]
+height = 1200
+width = 1920

@@ -39,13 +39,17 @@ function Game.level_loaded()
 
 	GameBase.game_camera = camera_unit
     level1(GameBase.world)
-    PhysicsWorld.set_gravity(Game.pw, Vector3(0, 0, -1.0))
+    --PhysicsWorld.set_gravity(Game.pw, Vector3(0, 0, -1.0))
     playerActor = PhysicsWorld.actor_instances(Game.pw, Game.player)
     --print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
-    PhysicsWorld.enable_debug_drawing(pw,true)
+    --PhysicsWorld.enable_debug_drawing(Game.pw,true)
+	mat = Material.get_material("units/Background/computer_wires")
+	delta = 0.0
 end
 
 function Game.update(dt)
+	delta = delta + dt
+	Material.set_float(mat, "u_time", delta)
     ballActor = PhysicsWorld.actor_instances(Game.pw, Game.ball)
     --print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
     --PhysicsWorld.actor_teleport_world_pose(Game.pw, playerActor, SceneGraph.world_pose(Game.sg, Game.player))
@@ -56,7 +60,7 @@ function Game.update(dt)
 	end
 
 	local vel = PhysicsWorld.actor_linear_velocity(Game.pw, ballActor)
-    if Keyboard.released(Keyboard.button_id("space")) and Vector3.length(vel) < 0.1 then
+    if Keyboard.released(Keyboard.button_id("space")) then
         PhysicsWorld.actor_add_impulse(Game.pw, ballActor, Vector3(0, 0, 15))
     end
 

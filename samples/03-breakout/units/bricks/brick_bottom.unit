@@ -1,0 +1,92 @@
+
+components = [
+	{
+		data = {
+			class = "static"
+			collision_filter = "default"
+			lock_rotation_x = true
+			lock_rotation_y = true
+			lock_rotation_z = true
+			lock_translation_x = false
+			lock_translation_y = true
+			lock_translation_z = false
+			mass = 10
+			material = "default"
+		}
+		id = "127dcbdb-4cde-4c1e-8610-00adc03cd4d9"
+		type = "actor"
+	}
+	{
+		data = {
+			collider_data = {
+				half_extents = [
+					6.625
+					0.015625
+					3.71875
+				]
+				position = [
+					0.046875
+					0
+					-0.046875
+				]
+				rotation = [
+					0
+					0
+					0
+					1
+				]
+			}
+			shape = "box"
+			source = "inline"
+		}
+		id = "56b7660c-58c0-45a8-8b3f-644c786236f0"
+		type = "collider"
+	}
+	{
+		data = {
+			script_resource = "scripts/bricks"
+		}
+		id = "88c8e917-196a-4382-8e6d-0e0613589197"
+		type = "script"
+	}
+	{
+		data = {
+			state_machine_resource = "units/bricks/brick_bottom"
+		}
+		id = "1ae2bba5-d24a-4c6e-8af7-a8b97340d221"
+		type = "animation_state_machine"
+	}
+	{
+		data = {
+			depth = 0
+			layer = 0
+			material = "units/bricks/brick_bottom"
+			sprite_resource = "units/bricks/brick_bottom"
+			visible = true
+		}
+		id = "bb37a5a2-1660-41fa-a979-ccf9438b80a9"
+		type = "sprite_renderer"
+	}
+	{
+		data = {
+			position = [
+				0
+				0
+				0
+			]
+			rotation = [
+				0
+				0
+				0
+				1
+			]
+			scale = [
+				1
+				1
+				1
+			]
+		}
+		id = "30e8a62a-4845-46fd-a9b2-c2538aa13edf"
+		type = "transform"
+	}
+]

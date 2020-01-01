@@ -1,6 +1,6 @@
 PIXELS_PER_METER=32
-block_width = 384
-block_height = 128
+block_width = 425
+block_height = 239
 block_num_rows = 6
 blocks_per_row = 6
 platform_height = 128
@@ -11,6 +11,10 @@ ball_radius = 128
 
 block_names = {"units/Walls/brick", "units/Walls/brick_blue", "units/Walls/brick_pink_side", "units/Walls/brick_red"}
 blocks = {}
+local pw = nil
+local rw = nil
+local sg = nil
+local sm = nil
 
 function gen_background()
 end
@@ -51,35 +55,32 @@ end
 
 function level1(world)
 
-	pw = World.physics_world(world)
-	rw = World.render_world(world)
-	sg = World.scene_graph(world)
-	sm = World.animation_state_machine(world)
-
-    World.spawn_unit(world, "units/Background/background", Vector3(0, 0, 0))
+    local unit = World.spawn_unit(world, "units/Background/computer_wires", Vector3(0, 0, 0))
     gen_piped_wall(world)
 
     width = width - 2*pipe_width
     heigth = heigth - 2*pipe_height
     bricks_scale = width/(blocks_per_row*block_width)
-	ball_scale = 0.2
-	platform_scale = 0.3
+	ball_scale = 0.3
+	platform_scale = 0.35
     pos = -(device_width - 2*pipe_width)/2/PIXELS_PER_METER
     pos = pos + (block_width/PIXELS_PER_METER/2)*bricks_scale
     posz = heigth/2/PIXELS_PER_METER;
     posz = posz - (block_height/PIXELS_PER_METER/2)*bricks_scale
     for i=1, block_num_rows do
+		blocks[i] = {}
         for j=1, blocks_per_row do
-            idx = (i-5)*5 + j
-            blocks[idx] = World.spawn_unit(world, "units/bricks/bricks_sheet", Vector3(pos, 0, posz), Quaternion.from_elements(0, 0, 0, 1), Vector3(bricks_scale, bricks_scale, bricks_scale))
+            blocks[i][j] = World.spawn_unit(world, "units/bricks/brick_bottom", Vector3(pos, 0, posz), Quaternion.from_elements(0, 0, 0, 1), Vector3(bricks_scale, bricks_scale, bricks_scale))
             --SceneGraph.set_local_scale(sg, blocks[idx], Vector3(scale, scale, scale))
-            RenderWorld.sprite_set_frame(rw, blocks[idx], math.random(1,20))
+			--RenderWorld.sprite_set_frame(rw, blocks[i][j], 25)
             pos = pos + (block_width/PIXELS_PER_METER)*bricks_scale
         end
         pos = -(device_width - 2*pipe_width)/2/PIXELS_PER_METER
         pos = pos + (block_width/PIXELS_PER_METER/2)*bricks_scale
         posz = posz - (block_height/PIXELS_PER_METER)*bricks_scale
     end
+	mat2 = Material.get_material("units/bricks/brick_bottom")
+	Material.set_vector2(mat2, "u_block_size", Vector2(block_width*bricks_scale/device_width, block_height*bricks_scale/device_heigth))
 
     pos_platform_z = -heigth/2/PIXELS_PER_METER;
     pos_platform_z = pos_platform_z + (platform_height/PIXELS_PER_METER/2)*platform_scale

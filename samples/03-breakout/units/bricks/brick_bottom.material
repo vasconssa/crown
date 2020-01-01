@@ -1,0 +1,26 @@
+
+shader = "brick"
+textures = {
+	u_albedo = "units/bricks/brick_bottom"
+}
+uniforms = {
+	u_color = {
+		type = "vector4"
+		value = [
+			1
+			1
+			1
+			1
+		]
+	}
+	u_block_size = {
+		type = "vector4"
+		value = [
+			1
+			1
+			1
+			1
+		]
+	}
+
+}

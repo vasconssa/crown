@@ -72,7 +72,7 @@ components = [
 	{
 		data = {
 			depth = 0
-			layer = 0
+			layer = 1
 			material = "units/platforms/platform"
 			sprite_resource = "units/platforms/platform"
 			visible = true
