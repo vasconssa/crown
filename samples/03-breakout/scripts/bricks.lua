@@ -41,7 +41,7 @@ end
 
 function Bricks.update(world, dt)
 	clock = clock + dt
-    for i, unit in ipairs(destructible) do
+    for i, unit in pairs(destructible) do
 		if clock - unit[2] > 1 then
 			World.destroy_unit(GameBase.world, unit[1])
 			destructible[i] = nil
@@ -58,7 +58,7 @@ function Bricks.collision_begin(touched, touching, actor, position, normal, dist
 			elseif Data[wrd][touching]["num_collisions"] == 2 then
 				AnimationStateMachine.trigger(Game.sm, touching, "explode")
 				local actor = PhysicsWorld.actor_instances(Game.pw, touching)
-				PhysicsWorld.actor_disable_collision(Game.pw, actor)
+				PhysicsWorld.actor_destroy(Game.pw, actor)
 				table.insert(destructible, {touching, clock})
 			--elseif Data[wrd][touching]["num_collisions"] == 3 then
 				--World.destroy_unit(GameBase.world, touching)

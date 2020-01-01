@@ -55,7 +55,8 @@ end
 
 function level1(world)
 
-    local unit = World.spawn_unit(world, "units/Background/computer_wires", Vector3(0, 0, 0))
+    local unitBg = World.spawn_unit(world, "units/Background/computer_wires", Vector3(0, 0, 0))
+	matBg = RenderWorld.sprite_material(Game.rw, unitBg)
     gen_piped_wall(world)
 
     width = width - 2*pipe_width
@@ -79,8 +80,8 @@ function level1(world)
         pos = pos + (block_width/PIXELS_PER_METER/2)*bricks_scale
         posz = posz - (block_height/PIXELS_PER_METER)*bricks_scale
     end
-	mat2 = Material.get_material("units/bricks/brick_bottom")
-	Material.set_vector2(mat2, "u_block_size", Vector2(block_width*bricks_scale/device_width, block_height*bricks_scale/device_heigth))
+	mat_bricks = RenderWorld.sprite_material(Game.rw, blocks[1][1])
+	Material.set_vector2(mat_bricks, "u_block_size", Vector2(block_width*bricks_scale/device_width, block_height*bricks_scale/device_heigth))
 
     pos_platform_z = -heigth/2/PIXELS_PER_METER;
     pos_platform_z = pos_platform_z + (platform_height/PIXELS_PER_METER/2)*platform_scale

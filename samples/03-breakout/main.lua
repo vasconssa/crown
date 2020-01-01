@@ -43,13 +43,12 @@ function Game.level_loaded()
     playerActor = PhysicsWorld.actor_instances(Game.pw, Game.player)
     --print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
     --PhysicsWorld.enable_debug_drawing(Game.pw,true)
-	mat = Material.get_material("units/Background/computer_wires")
 	delta = 0.0
 end
 
 function Game.update(dt)
 	delta = delta + dt
-	Material.set_float(mat, "u_time", delta)
+	Material.set_float(matBg, "u_time", delta)
     ballActor = PhysicsWorld.actor_instances(Game.pw, Game.ball)
     --print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
     --PhysicsWorld.actor_teleport_world_pose(Game.pw, playerActor, SceneGraph.world_pose(Game.sg, Game.player))
