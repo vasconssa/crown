@@ -1,0 +1,36 @@
+
+components = [
+	{
+		data = {
+			depth = 0
+			layer = 0
+			material = "units/gui/crownout_logo"
+			sprite_resource = "units/gui/crownout_logo"
+			visible = true
+		}
+		id = "5e391d54-29d0-488d-b0b4-29c06357c5c0"
+		type = "sprite_renderer"
+	}
+	{
+		data = {
+			position = [
+				0
+				0
+				0
+			]
+			rotation = [
+				0
+				0
+				0
+				1
+			]
+			scale = [
+				1
+				1
+				1
+			]
+		}
+		id = "8f93013f-5a22-446e-90a0-415b7ce47524"
+		type = "transform"
+	}
+]

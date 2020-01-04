@@ -44,9 +44,13 @@ function Game.level_loaded()
     --print(PhysicsWorld.actor_is_kinematic(Game.pw, playerActor))
     --PhysicsWorld.enable_debug_drawing(Game.pw,true)
 	delta = 0.0
+	gui = World.create_screen_gui(GameBase.world)
 end
 
 function Game.update(dt)
+	Gui.image (gui, Vector2(device_width - 250, device_heigth - 200), Vector2(200, 100), "units/gui/crownout_logo", Color4(0, 0, 0,
+	1))
+
 	delta = delta + dt
 	Material.set_float(matBg, "u_time", delta)
     ballActor = PhysicsWorld.actor_instances(Game.pw, Game.ball)
